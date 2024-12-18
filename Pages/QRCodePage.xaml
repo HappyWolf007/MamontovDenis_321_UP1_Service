@@ -9,6 +9,19 @@
       Title="QRCodePage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57"/>
+            <RowDefinition Height="286"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Image Name="imgbarcode"/>
+            <TextBlock Name="tbkbarcodecontent" FontWeight="Bold" HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Page>

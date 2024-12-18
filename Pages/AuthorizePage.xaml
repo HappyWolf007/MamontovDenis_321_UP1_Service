@@ -9,6 +9,26 @@
       Title="AuthorizePage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="353*"/>
+            <ColumnDefinition Width="447*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Margin="255,0,10,0" VerticalAlignment="Center" Height="104">
+            <Label Content="Логин" HorizontalAlignment="Right" />
+            <Label Content="Пароль"  HorizontalAlignment="Right" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="110" VerticalAlignment="Center" Height="91">
+            <TextBox x:Name="Login"  Width="100"/>
+            <Separator Opacity="0" Height="5"/>
+            <PasswordBox x:Name="Password"  Width="100"/>
+            <Separator Opacity="0" Height="20"/>
+            <Button x:Name="Enter" Content="Войти" Width="100" Click="Enter_Click" Style="{StaticResource CustomButton}"/>
+        </StackPanel>
     </Grid>
 </Page>

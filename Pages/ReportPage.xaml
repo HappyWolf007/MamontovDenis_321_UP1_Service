@@ -9,6 +9,27 @@
       Title="ReportPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Style="{StaticResource CustomStackPanel}" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <Button x:Name="QuantityCompletedRequestsButton" Content="Количество выполненных заявок" Style="{StaticResource CustomButton}" Click="QuantityCompletedRequestsButton_Click" Width="160"/>
+            <Separator Opacity="0" Width="10"/>
+            <Button x:Name="AVGTimeCompletedRequestsButton" Content="Среднее время выполнения заявки" Style="{StaticResource CustomButton}" Click="AVGTimeCompletedRequestsButton_Click" Width="160"/>
+            <Separator Opacity="0" Width="10"/>
+            <Button x:Name="StatisticsOnTypesOfFaultsButton" Content="Статистика по типам неисправностей" Style="{StaticResource CustomButton}" Click="StatisticsOnTypesOfFaultsButton_Click" Width="188"/>
+        </StackPanel>
+        <Label x:Name="QuantityCompletedRequestsLabel" Style="{StaticResource AddLabel}" Grid.Row="1"  Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <Label x:Name="AVGTimeCompletedRequestsLabel" Style="{StaticResource AddLabel}" Grid.Row="1"  Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+
+        <StackPanel x:Name="StatisticsLabelsContainer" Style="{StaticResource CustomStackPanel}" Grid.Row="1" Grid.ColumnSpan="2"/>
     </Grid>
+
 </Page>

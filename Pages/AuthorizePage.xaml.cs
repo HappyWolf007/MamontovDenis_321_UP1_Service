@@ -24,5 +24,53 @@ namespace Service.Pages
         {
             InitializeComponent();
         }
+
+        private void Enter_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(Login.Text) || string.IsNullOrEmpty(Password.Password))
+            {
+                MessageBox.Show("Вы не заполнели все поля");
+            }
+            else
+            {
+                string login = Login.Text;
+                string password = Password.Password;
+
+                try
+                {
+                    using (var db = new Entities())
+                    {
+                        var user = db.Users
+                            .AsNoTracking().FirstOrDefault(u => u.Login == login && u.Password == password);
+                        if (user == null)
+                        {
+                            MessageBox.Show("Пользователь не зарегистрирован");
+                            return;
+                        }
+                        MessageBox.Show("Вы успешно авторизовались");
+
+                        CurrentUser.positionID = ReturnPositionID(user.TechnicianID);
+                           
+                        NavigationService.Navigate(new Requests());
+
+                        
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private int ReturnPositionID(int? TechnicianID)
+        {
+            var db = new Entities();
+            var technician = db.Technician.AsNoTracking().FirstOrDefault(u => u.technician_id == TechnicianID);
+
+            return (int)technician.position_id;
+        }
     }
 }

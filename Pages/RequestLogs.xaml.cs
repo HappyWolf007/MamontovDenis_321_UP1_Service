@@ -23,6 +23,8 @@ namespace Service.Pages
         public RequestLogs()
         {
             InitializeComponent();
+
+            DGRequestLogs.ItemsSource = Entities.GetContext().RequestLog.ToList();
         }
     }
 }
