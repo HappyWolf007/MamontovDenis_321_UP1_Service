@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Service.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для RequestLogs.xaml
-    /// </summary>
     public partial class RequestLogs : Page
     {
         public RequestLogs()

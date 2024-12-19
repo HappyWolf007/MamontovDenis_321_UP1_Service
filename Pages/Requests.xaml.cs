@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Service.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для Requests.xaml
-    /// </summary>
     public partial class Requests : Page
     {
         public Requests()
@@ -82,7 +79,6 @@ namespace Service.Pages
 
             if (FindForPriority.SelectedIndex != 0)
             {
-                //currentRequests = currentRequests.Where(x => x.priority_id == ReturnPriority(FindForPriority.Text)).ToList();
                 currentRequests = currentRequests.Where(x => x.priority_id == FindForPriority.SelectedIndex).ToList();
             }
 
@@ -92,7 +88,6 @@ namespace Service.Pages
 
                 currentRequests = currentRequests.Where(x => x.status_id == FindForStatus.SelectedIndex).ToList();
             }
-            // Присваиваем итоговый список в источник данных
             DataGridRequests.ItemsSource = currentRequests;
         }
 

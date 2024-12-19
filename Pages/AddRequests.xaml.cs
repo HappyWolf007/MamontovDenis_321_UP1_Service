@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace Service.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для AddRequests.xaml
-    /// </summary>
+
     public partial class AddRequests : Page
     {
         private Request requests = new Request();
@@ -48,12 +46,9 @@ namespace Service.Pages
                     DateCreate.IsEnabled = false;
                     NumberRequest.IsReadOnly = true;
                     
-
                 }
 
             }
-
-
 
             equipment.ItemsSource = Entities.GetContext().Equipment.Select(u => u.description).ToList();
             faultType.ItemsSource = Entities.GetContext().FaultType.Select(u => u.description).ToList();
@@ -166,9 +161,7 @@ namespace Service.Pages
                 }
             }
 
-
         }
-
         private int ReturnPriority(string addPriority)
         {
             return Entities.GetContext().Priority.Where(x => x.priority_name == addPriority).Select(u => u.priority_id).FirstOrDefault();
