@@ -19,7 +19,7 @@
             <ColumnDefinition Width="447*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1" Margin="255,0,10,0" VerticalAlignment="Center" Height="104">
+        <StackPanel Grid.Row="1" Margin="0,0,10,0" VerticalAlignment="Center" Height="104" HorizontalAlignment="Right" Width="88">
             <Label Content="Логин" HorizontalAlignment="Right" />
             <Label Content="Пароль"  HorizontalAlignment="Right" />
         </StackPanel>
