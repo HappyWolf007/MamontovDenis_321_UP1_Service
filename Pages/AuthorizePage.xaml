@@ -20,8 +20,8 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="1" Margin="0,0,10,0" VerticalAlignment="Center" Height="104" HorizontalAlignment="Right" Width="88">
-            <Label Content="Логин" HorizontalAlignment="Right" />
-            <Label Content="Пароль"  HorizontalAlignment="Right" />
+            <Label Content="Логин" HorizontalAlignment="Right" FontFamily="Monotype Corsiva" Height="31" VerticalContentAlignment="Center"/>
+            <Label Content="Пароль"  HorizontalAlignment="Right" FontFamily="Monotype Corsiva" Height="33"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="110" VerticalAlignment="Center" Height="91">
             <TextBox x:Name="Login"  Width="100"/>

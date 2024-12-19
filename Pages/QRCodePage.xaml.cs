@@ -22,9 +22,6 @@ using ZXing;
 
 namespace Service.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для QRCodePage.xaml
-    /// </summary>
     public partial class QRCodePage : Page
     {
         public QRCodePage()
@@ -37,6 +34,7 @@ namespace Service.Pages
         {
             try
             {
+
                 System.Drawing.Image img = null;
                 BitmapImage bimg = new BitmapImage();
                 using (var ms = new MemoryStream())
