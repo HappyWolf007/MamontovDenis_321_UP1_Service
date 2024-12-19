@@ -27,7 +27,7 @@ namespace Service.Pages
         public QRCodePage()
         {
             InitializeComponent();
-            GenerateQR("https://forms.yandex.ru/u/6762b385f47e735ec9193d0a/"); // Замените URL на ваш опрос
+            GenerateQR("https://forms.yandex.ru/u/6762b385f47e735ec9193d0a/"); 
         }
 
         private void GenerateQR(string content)
@@ -41,7 +41,7 @@ namespace Service.Pages
                 {
                     BarcodeWriter writer;
                     writer = new ZXing.BarcodeWriter() { Format = BarcodeFormat.QR_CODE };
-                    writer.Options.Height = 120; // Настройте размер QR-кода
+                    writer.Options.Height = 120; 
                     writer.Options.Width = 200;
                     writer.Options.PureBarcode = true;
                     img = writer.Write(content);
