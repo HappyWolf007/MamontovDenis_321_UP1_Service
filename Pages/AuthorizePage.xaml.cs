@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Service.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для AuthorizePage.xaml
-    /// </summary>
     public partial class AuthorizePage : Page
     {
         public AuthorizePage()
